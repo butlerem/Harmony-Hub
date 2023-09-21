@@ -6,18 +6,24 @@
 HarmonyHub is a cutting-edge web application designed to empower musicians and artists worldwide to collaborate seamlessly on music projects, regardless of their geographical locations. With HarmonyHub, musicians can come together to compose, produce, and record music in a virtual studio environment, fostering creativity, connectivity, and a sense of community in the world of music.
 
 # Technologies Used
-Frontend:
+*Frontend:*
 
 **React**: A powerful JavaScript library for building user interfaces and handling client-side logic.
+
 **Chakra UI**: A modern and customizable component library for designing a user-friendly and responsive interface.
+
 **WebSocket or Socket.io**: Real-time communication technologies for live chat and collaborative music composition.
 
-Backend:
+*Backend:*
 
 **Node.js**: A server-side JavaScript runtime for building the backend of the application.
+
 **Express.js**: A web application framework for routing, middleware management, and handling HTTP requests.
+
 **MongoDB**: A NoSQL database for storing user data, project information, and chat history.
+
 **JWT (JSON Web Tokens)**: For secure user authentication and authorization.
+
 **GraphSql**: A query language for APIs that provides a more efficient and flexible way to request and manipulate data.
 
 # Key Features
