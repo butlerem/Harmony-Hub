@@ -1,0 +1,23 @@
+# Node.js dependencies
+node_modules
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Lock files
+yarn.lock
+package-lock.json
+
+# Cache and local files
+.cache/
+.DS_Store
+
+# Build folder
+/build
+
+# Editors
+.idea
+.vscode/
