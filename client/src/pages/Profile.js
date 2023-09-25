@@ -13,7 +13,6 @@ import {
   Heading,
   SimpleGrid,
   Button,
-  Center
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
