@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ChakraProvider,
   Box,
@@ -8,11 +8,7 @@ import {
   theme,
   Input,
   Stack,
-  Button,
-  LinkBox,
-  LinkOverlay,
-  Heading,
-  Divider,
+  Button
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
@@ -35,20 +31,12 @@ function SignUp() {
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
             <Logo h="40vmin" pointerEvents="none" />
-            <Text> Login to Your Account </Text>
+            <Text> Sign Up for a New Account </Text>
             <Stack spacing={3}>
               <Input placeholder='Email' size='md' value={email} onChange={(e) => setEmail(e.target.value)}/>
               <Input placeholder='Password' size='md' type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
-              <Button colorScheme='teal' onClick={handleSignUp}>Sign In</Button>
+              <Button colorScheme='teal' onClick={handleSignUp}>Sign Up</Button>
             </Stack>
-              <Divider />
-            <LinkBox as='article'>
-              <Heading size='md' my='2'>
-                <LinkOverlay href='#'>
-                  Create an Account
-                </LinkOverlay>
-              </Heading>
-            </LinkBox>
           </VStack>
         </Grid>
       </Box>
