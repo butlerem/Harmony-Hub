@@ -17,8 +17,29 @@ function SignUp() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useSate(null);
+  
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  };
+
+  const validatePassword = (password) => {
+    return password.length >= 6;
+  };
+
 
   const handleSignUp = () => {
+
+    if(!validateEmail(email)) {
+      setError('Invalid email address');
+      return;
+    }
+    if(!validatePassword(password)) {
+      setError('Password must be at least six characters long');
+      return;
+    }
+
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);
     window.location.href = '/dashboard';
