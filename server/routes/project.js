@@ -1,11 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const Project = require('../models/Project');
+const User = require('../models/User');
 
+// Create Project and Add to User
 router.post('/create', async (req, res) => {
   try {
-    const newProject = new Project(req.body);
+    const newProject = new Project(req.body.project);
     const savedProject = await newProject.save();
+
+    // Add project to user
+    const user = await User.findById(req.body.userId);
+    user.projects.push(savedProject);
+    await user.save();
+
     res.json(savedProject);
   } catch (err) {
     res.status(500).json(err);
@@ -42,10 +50,20 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete Project
+// Delete Project and Remove from User
 router.delete('/:id', async (req, res) => {
   try {
-    await Project.findByIdAndRemove(req.params.id);
+    const project = await Project.findById(req.params.id);
+    await project.remove();
+
+    // Remove project from user
+    const user = await User.findById(req.body.userId);
+    const index = user.projects.indexOf(req.params.id);
+    if (index > -1) {
+      user.projects.splice(index, 1);
+    }
+    await user.save();
+
     res.json({ message: 'Project deleted' });
   } catch (err) {
     res.status(500).json(err);
