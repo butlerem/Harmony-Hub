@@ -4,7 +4,11 @@
   "description": "Harmony Music App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run start --prefix ./server\" \"npm run start --prefix ./client\"",
+    "server": "npm run start --prefix ./server",
+    "client": "npm run start --prefix ./client",
+    "install-all": "npm install && npm run install-all --prefix ./server && npm run install-all --prefix ./client",
+    "test": "concurrently \"npm run test --prefix ./server\" \"npm run test --prefix ./client\""
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,7 @@
   "homepage": "https://github.com/butlerem/Harmony-Hub#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "concurrently": "^7.6.0",
     "mongoose": "^7.5.2"
   }
 }
