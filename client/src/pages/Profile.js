@@ -38,11 +38,6 @@ function UserProfilePage() {
     // Update the profile state with the new data
   };
 
-  const handleChangePassword = () => {
-    // Handle changing the password here
-    // Update the password in the profile state
-  };
-
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
