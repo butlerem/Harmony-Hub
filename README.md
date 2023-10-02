@@ -98,3 +98,12 @@ Mahmud Khan Deep - Mahmud-deep
 
 # Rough Diagram
 ![image](https://github.com/butlerem/Harmony-Hub/assets/130177580/9ad5c304-d2a3-44e6-be55-ba5c5504f6b0)
+
+
+## Links
+https://harmonyhubmusic-83f1260758fd.herokuapp.com/
+
+https://github.com/butlerem/Harmony-Hub
+
+https://docs.google.com/presentation/d/1jOOj-5wRu0CSIzAqU2E6ySn3mmln94ZWF2hlAipHb_E/edit?usp=sharing
+
