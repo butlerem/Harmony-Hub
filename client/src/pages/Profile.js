@@ -21,7 +21,6 @@ import {
   FormControl,
   FormLabel,
   Heading,
-  Spacer
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 
@@ -44,15 +43,22 @@ function UserProfilePage() {
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
-            <Heading as="h1">Your Plan</Heading>
-            <Box>
+            <Heading as="h1">Your Current Plan</Heading>
+            <Card>
+            <CardBody>
+                <Text>You are currently using HarmonyHub: Free!</Text>
+              </CardBody>
+            </Card>
+            <Button colorScheme="teal">
+                Change Plan Will Available in the Future
+              </Button>
+            <Heading as="h1">Plan Options</Heading>
             <Card>
               <CardBody>
                 <Text>HarmonyHub: Free!</Text>
                 <Text>Listen to music and create your own playlists. Includes ads.</Text>
               </CardBody>
             </Card>
-            <Spacer />
             <Card>
               <CardBody>
                 <Text>HarmonyHub: Premium!</Text>
@@ -109,7 +115,6 @@ function UserProfilePage() {
                   </DrawerFooter>
                 </DrawerContent>
               </Drawer>
-            </Box>
           </VStack>
         </Grid>
       </Box>
