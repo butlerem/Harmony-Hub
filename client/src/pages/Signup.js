@@ -17,7 +17,7 @@ function SignUp() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useSate(null);
+  const [error, setError] = useState(null);
   
   const validateEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -39,6 +39,8 @@ function SignUp() {
       setError('Password must be at least six characters long');
       return;
     }
+
+    console.log(error);
 
     localStorage.setItem('email', email);
     localStorage.setItem('password', password);

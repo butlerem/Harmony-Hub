@@ -20,6 +20,8 @@ router.post('/create', async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
+=======
 // List All Projects
 router.get('/list', async (req, res) => {
   try {
@@ -70,4 +72,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+>>>>>>> 45a61b87387a0c168ec19fdab8daaec51eca4eb3
 module.exports = router;
