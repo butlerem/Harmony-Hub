@@ -15,7 +15,7 @@ function LeftMenu() {
             <FaSpotify />
           </i> */}
 
-          <h2>HURMONY HUB</h2>
+          <h2>HARMONY HUB</h2>
         </div>
 
         
